@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  min-height: 100px;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  min-height: 100px;
+  background-color: aquamarine;
+}
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+main p {
+  margin-top: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+button {
+  width: 250px;
+  min-height: 50px;
+  border-radius: 10px;
+  border: none;
+}
+button:hover {
+  background-color: bisque;
+}
+
+
+ /*для контейнера*/
+.container {
+    width: 100%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (max-width: 992px) {
+    header .container {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    main .container {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    footer .container {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1140px;
+    }
+  }

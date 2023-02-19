@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Выполнил: Жаныбек Ж.</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+        <p style="margin-bottom: 20px;"><b>Калькулятор, который будет находить площадь и периметр квадрата:</b></p>
+        <form action="" >
+            <div class="form-input">
+                <label for="rebro1">Ребро А</label>
+                <input type="text" name="" id="rebro1">
+            </div>
+            <div class="form-input">
+                <label for="rebro2">Ребро B</label>
+                <input type="text" name="" id="rebro2">
+            </div>
+            <button class="calcSquareBtn">Вычислить площадь</button>
+            <button class="calcPerimeterBtn">Вычислить периметр</button>
+            <button type="reset" class="resetBtn">Сбросить</button>
+            <p>Периметр: <span class="perimeterValue"></span></p>
+            <p>Площадь: <span class="squareValue"></span></p>
+        </form>
+    </div>
+    </main>
+    <footer></footer>
+    <script defer src="./calc.js"></script>
+    <script>
+        const calcSquare = (a) => {
+            return Number(a)*Number(a);
+        }
+        const calcPerimeter = (a, b) => {
+            return (Number(a) +Number(b)) * 2 ;
+        }       
+        const squareBtn = document.querySelector('.calcSquareBtn');
+        const perimeterBtn = document.querySelector('.calcPerimeterBtn');
+        
+        const perimterValue = document.querySelector('.perimeterValue');
+        const squareValue = document.querySelector('.squareValue');
+
+        squareBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const rebro1 = document.querySelector('#rebro1').value;
+            if(!rebro1) {
+                alert('Введите длину ребра А');
+            } else {
+                const result = calcSquare(rebro1);
+                squareValue.textContent = result;
+            }  
+        })
+        perimeterBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const rebro2 = document.querySelector('#rebro2').value;
+            const rebro1 = document.querySelector('#rebro1').value;
+            if(!rebro1) {
+                alert('Введите длину ребра А');
+            } else if(!rebro2) {
+                alert('Введите длину ребра B');
+            } else {
+                const result = calcPerimeter(rebro1, rebro2);
+                perimterValue.textContent = result;
+            }
+        })
+        const resetBtn = document.querySelector('.resetBtn');
+        resetBtn.addEventListener('click', () => {
+            squareValue.textContent = 0;
+            perimterValue.textContent = 0;
+        })
+    </script>
+</body>
+
+</html>
