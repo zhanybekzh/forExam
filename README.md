@@ -8,5 +8,5 @@
 - наличие уникальных стилей (90-100 баллов)
 
 Полезные ссылки:
-https://learn.javascript.ru/dom-nodes
-https://learn.javascript.ru/introduction-browser-events
+- https://learn.javascript.ru/dom-nodes
+- https://learn.javascript.ru/introduction-browser-events
